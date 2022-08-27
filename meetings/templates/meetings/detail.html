@@ -6,10 +6,11 @@
 </head>
 <body>
 <h1>{{meeting.title}}</h1>
-<p>
-    Schedule Date : {{meeting.date}} <br>
-    Schedule Time : {{meeting.start_time}} <br>
-    Meeting Room : <strong>{{meeting.room}}</strong>
-</p>
+    <p>
+        Schedule Date : {{meeting.date}} <br>
+        Schedule Time : {{meeting.start_time}} <br>
+        Meeting Room : <strong>{{meeting.room}}</strong>
+    </p>
+    <a href="{% url 'welcome' %}">Home</a>
 </body>
 </html>

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome!!!</title>
+    <link rel="stylesheet" href="/static/website/style.css">
+
 </head>
 <body>
     <h1>Welcome to the Meeting Planner!</h1>
@@ -21,11 +23,12 @@
     <ul>
         {% for meeting in meetings %}
             <li>
-                <a href="/meetings/{{meeting.id}}">
+                <a href="{% url 'detail' meeting.id %}">
                     {{ meeting.title }}
                 </a>
             </li>
         {% endfor %}
     </ul>
+    <a href="{% url 'rooms' %}"> Rooms </a>
 </body>
 </html>
